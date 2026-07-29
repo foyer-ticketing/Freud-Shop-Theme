@@ -5,11 +5,17 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "settings": { "heading": "Freud Museum Shop", "heading_size": "h0" }
+          "settings": {
+            "heading": "Freud Museum Shop",
+            "heading_size": "h0"
+          }
         },
         "text": {
           "type": "text",
-          "settings": { "text": "<p>Every purchase supports the museum</p>", "text_style": "body" }
+          "settings": {
+            "text": "Every purchase supports the museum",
+            "text_style": "body"
+          }
         },
         "buttons": {
           "type": "buttons",
@@ -22,7 +28,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "buttons"],
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
       "settings": {
         "image_overlay_opacity": 30,
         "image_height": "large",
@@ -39,11 +49,30 @@
     "category_list": {
       "type": "collection-list",
       "blocks": {
-        "c1": { "type": "featured_collection", "settings": { "collection": "" } },
-        "c2": { "type": "featured_collection", "settings": { "collection": "" } },
-        "c3": { "type": "featured_collection", "settings": { "collection": "" } }
+        "c1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "c2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "c3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
       },
-      "block_order": ["c1", "c2", "c3"],
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
       "settings": {
         "title": "Shop by category",
         "heading_size": "h2",
@@ -88,12 +117,37 @@
     "featured_collections": {
       "type": "collection-list",
       "blocks": {
-        "f1": { "type": "featured_collection", "settings": { "collection": "" } },
-        "f2": { "type": "featured_collection", "settings": { "collection": "" } },
-        "f3": { "type": "featured_collection", "settings": { "collection": "" } },
-        "f4": { "type": "featured_collection", "settings": { "collection": "" } }
+        "f1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "f2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "f3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "f4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
       },
-      "block_order": ["f1", "f2", "f3", "f4"],
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
       "settings": {
         "title": "Featured collections",
         "heading_size": "h2",
@@ -112,11 +166,16 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "settings": { "heading": "Every purchase supports the museum", "heading_size": "h1" }
+          "settings": {
+            "heading": "Every purchase supports the museum",
+            "heading_size": "h1"
+          }
         },
         "text": {
           "type": "text",
-          "settings": { "text": "<p>The Freud Museum is the former home of Sigmund Freud and his daughter Anna Freud. Every order helps care for the house, its collections and Freud's legacy.</p>" }
+          "settings": {
+            "text": "<p>The Freud Museum is the former home of Sigmund Freud and his daughter Anna Freud. Every order helps care for the house, its collections and Freud's legacy.</p>"
+          }
         },
         "button": {
           "type": "button",
@@ -127,7 +186,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -138,5 +201,11 @@
       }
     }
   },
-  "order": ["hero", "category_list", "best_sellers", "featured_collections", "supports_museum"]
+  "order": [
+    "hero",
+    "category_list",
+    "best_sellers",
+    "featured_collections",
+    "supports_museum"
+  ]
 }
