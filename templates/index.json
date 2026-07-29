@@ -1,56 +1,74 @@
 {
   "sections": {
-    "image_banner": {
+    "hero": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
+          "settings": { "heading": "Freud Museum Shop", "heading_size": "h0" }
         },
-        "button": {
+        "text": {
+          "type": "text",
+          "settings": { "text": "<p>Every purchase supports the museum</p>", "text_style": "body" }
+        },
+        "buttons": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_link_2": ""
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "text", "buttons"],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 30,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
         "image_behavior": "none",
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
+        "stack_images_on_mobile": true,
         "show_text_below": false
       }
     },
-    "featured_collection": {
+    "category_list": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": { "type": "featured_collection", "settings": { "collection": "" } },
+        "c2": { "type": "featured_collection", "settings": { "collection": "" } },
+        "c3": { "type": "featured_collection", "settings": { "collection": "" } }
+      },
+      "block_order": ["c1", "c2", "c3"],
+      "settings": {
+        "title": "Shop by category",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "best_sellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best sellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
@@ -63,13 +81,62 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "featured_collections": {
+      "type": "collection-list",
+      "blocks": {
+        "f1": { "type": "featured_collection", "settings": { "collection": "" } },
+        "f2": { "type": "featured_collection", "settings": { "collection": "" } },
+        "f3": { "type": "featured_collection", "settings": { "collection": "" } },
+        "f4": { "type": "featured_collection", "settings": { "collection": "" } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4"],
+      "settings": {
+        "title": "Featured collections",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "supports_museum": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": { "heading": "Every purchase supports the museum", "heading_size": "h1" }
+        },
+        "text": {
+          "type": "text",
+          "settings": { "text": "<p>The Freud Museum is the former home of Sigmund Freud and his daughter Anna Freud. Every order helps care for the house, its collections and Freud's legacy.</p>" }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "About the museum",
+            "button_link": "https://www.freud.org.uk/about-us/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     }
   },
-  "order": [
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["hero", "category_list", "best_sellers", "featured_collections", "supports_museum"]
 }
