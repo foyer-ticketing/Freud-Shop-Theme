@@ -197,6 +197,17 @@
           "secondary_button_label": "#333333",
           "shadow": "#333333"
         }
+      },
+      "scheme-6": {
+        "settings": {
+          "background": "#fbf9f5",
+          "background_gradient": "",
+          "text": "#333333",
+          "button": "#4b5c47",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#4b5c47",
+          "shadow": "#333333"
+        }
       }
     }
   },
@@ -256,6 +267,17 @@
             "button": "#719C8B",
             "button_label": "#FFFFFF",
             "secondary_button_label": "#333333",
+            "shadow": "#333333"
+          }
+        },
+        "scheme-6": {
+          "settings": {
+            "background": "#FBF9F5",
+            "background_gradient": "",
+            "text": "#333333",
+            "button": "#4B5C47",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#4B5C47",
             "shadow": "#333333"
           }
         }
