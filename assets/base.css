@@ -3623,8 +3623,27 @@ details-disclosure > details {
 @media screen and (max-width:989px){.header__utility-left{display:none;}}
 
 /* FREUD-ICON-LABELS — visible "Search" / "Basket" text next to the icons */
-.header__icon-text{font-size:1.2rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem;white-space:nowrap;}
-.header__icon--search .header__icon-text{margin-left:.6rem;}
+/* Dawn hard-codes .header__icon (and cart .icon) to a fixed 4.4rem square and
+   excludes the search <summary> from its flex rule — both break once a text
+   label is added, so both are overridden explicitly here. */
+.header__icon--search.header__icon--summary,
+.header__icon--cart{
+  width:auto;
+  min-width:4.4rem;
+  height:4.4rem;
+  display:inline-flex;
+  align-items:center;
+  padding:0 .6rem 0 0;
+}
+.header__icon--search.header__icon--summary > span:first-of-type{
+  display:inline-flex;
+  align-items:center;
+  height:100%;
+  flex-shrink:0;
+}
+.header__icon-glyph{position:relative;display:inline-flex;align-items:center;height:100%;flex-shrink:0;}
+.header__icon-glyph .cart-count-bubble{left:2.2rem;}
+.header__icon-text{font-size:1.2rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem;white-space:nowrap;line-height:1;}
 @media screen and (max-width:749px){.header__icon-text{display:none;}}
 
 /* FREUD-BANNER-TEXT — body copy/buttons in the hero banner stay Lato, normal weight */
@@ -3634,3 +3653,13 @@ details-disclosure > details {
 .footer__payment{display:none;}
 .footer-block__details-content.list-unstyled li a{text-decoration:none;}
 .footer-block__details-content.list-unstyled li a:hover{text-decoration:underline;text-decoration-color:#719C8B;text-underline-offset:4px;}
+
+/* FREUD-FOOTER-GRID — newsletter, Info and Visit us sit side by side like Kettle's Yard */
+@media screen and (min-width:750px){
+  .footer__content-top{display:flex;align-items:flex-start;flex-wrap:wrap;gap:4rem;}
+  .footer__blocks-wrapper{display:contents;}
+  .footer-block{flex:1 1 220px;}
+  .footer-block--newsletter{order:-1;flex:1 1 300px;max-width:360px;margin-top:0;display:block;}
+  .footer-block--newsletter .footer-block__newsletter{text-align:left;}
+  .footer-block--newsletter .newsletter-form__field-wrapper{max-width:100%;}
+}

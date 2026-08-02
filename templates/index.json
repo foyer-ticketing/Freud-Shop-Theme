@@ -50,13 +50,8 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-<<<<<<< HEAD
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "center",
-=======
         "show_text_box": true,
-        "color_scheme": "scheme-3",
->>>>>>> 7419b8b9584accb97916e24d7574ec0e0be0931a
+        "color_scheme": "scheme-2",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
