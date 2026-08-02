@@ -281,6 +281,25 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
+    {%- comment -%} Freud Museum brand fonts (loaded directly, independent of Shopify's font library) {%- endcomment -%}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap">
+    <style>
+      :root{
+        --font-heading-family: 'Crimson Text', Georgia, 'Times New Roman', serif !important;
+        --font-heading-style: normal !important;
+        --font-heading-weight: 700 !important;
+        --font-body-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        --font-body-style: normal !important;
+        --font-body-weight: 400 !important;
+        --font-body-weight-bold: 700 !important;
+      }
+      /* Type hierarchy polish for the serif */
+      h1,h2,h3,.h0,.h1,.h2,.h3{ line-height:1.12; letter-spacing:-0.01em; }
+      .banner__heading,.rich-text__heading,.title,.card__heading{ font-weight:700; }
+    </style>
+
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
