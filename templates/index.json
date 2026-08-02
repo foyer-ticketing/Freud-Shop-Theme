@@ -63,19 +63,19 @@
         "c1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "ceramics"
           }
         },
         "c2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "art-prints"
           }
         },
         "c3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "books-dvds"
           }
         }
       },
@@ -131,25 +131,25 @@
         "f1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "exhibitions"
           }
         },
         "f2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "anna-freud-room"
           }
         },
         "f3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "diaries-journals"
           }
         },
         "f4": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "greeting-cards-postcards1"
           }
         }
       },
@@ -185,7 +185,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>The Freud Museum is the former home of Sigmund Freud and his daughter Anna Freud. Every order helps care for the house, its collections and Freud's legacy.</p>"
+            "text": "<p>The Freud Museum is the former home of Sigmund Freud and his daughter Anna Freud. <br/>Every order helps care for the house, its collections and Freud's legacy.</p>"
           }
         },
         "button": {
