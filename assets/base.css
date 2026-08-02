@@ -3626,3 +3626,11 @@ details-disclosure > details {
 .header__icon-text{font-size:1.2rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem;white-space:nowrap;}
 .header__icon--search .header__icon-text{margin-left:.6rem;}
 @media screen and (max-width:749px){.header__icon-text{display:none;}}
+
+/* FREUD-BANNER-TEXT — body copy/buttons in the hero banner stay Lato, normal weight */
+.banner__text,.banner__buttons .button{font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:400;}
+
+/* FREUD-FOOTER — remove Shopify/payment branding, tidy footer link styling */
+.footer__payment{display:none;}
+.footer-block__details-content.list-unstyled li a{text-decoration:none;}
+.footer-block__details-content.list-unstyled li a:hover{text-decoration:underline;text-decoration-color:#719C8B;text-underline-offset:4px;}

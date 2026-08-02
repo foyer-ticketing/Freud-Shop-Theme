@@ -289,15 +289,24 @@
       :root{
         --font-heading-family: 'Crimson Text', Georgia, 'Times New Roman', serif !important;
         --font-heading-style: normal !important;
-        --font-heading-weight: 700 !important;
+        --font-heading-weight: 400 !important;
         --font-body-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
         --font-body-style: normal !important;
         --font-body-weight: 400 !important;
         --font-body-weight-bold: 700 !important;
       }
-      /* Type hierarchy polish for the serif */
-      h1,h2,h3,.h0,.h1,.h2,.h3{ line-height:1.12; letter-spacing:-0.01em; }
-      .banner__heading,.rich-text__heading,.title,.card__heading{ font-weight:700; }
+      /* Heading hierarchy */
+      h1,.h1{
+        font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+        font-size: 6.4rem;
+        font-weight: normal;
+        letter-spacing: -0.05rem;
+      }
+      h2,.h2{
+        font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+        font-weight: 600;
+        letter-spacing: -0.05rem;
+      }
     </style>
 
     {%- if settings.cart_type == 'drawer' -%}
