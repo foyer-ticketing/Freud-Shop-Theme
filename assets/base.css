@@ -3614,3 +3614,9 @@ details-disclosure > details {
 /* FREUD-NAV-OVERRIDE — bolder, larger primary nav */
 .header__menu-item{font-weight:600;font-size:1.6rem;letter-spacing:.04rem;}
 .header__menu-item:hover{text-decoration:underline;text-underline-offset:.6rem;}
+
+/* FREUD-HEADER-LEFT — custom top-left link + search moved to top-right (top-center) */
+.header__utility-left{grid-area:left-icons;justify-self:start;align-self:center;font-weight:600;font-size:1.5rem;text-decoration:none;}
+.header__utility-left:hover{text-decoration:underline;text-underline-offset:.6rem;}
+@media screen and (min-width:990px){.header--custom-left.header--top-center * > .header__search{display:inline-flex;}}
+@media screen and (max-width:989px){.header__utility-left{display:none;}}
