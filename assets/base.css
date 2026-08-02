@@ -3611,13 +3611,13 @@ details-disclosure > details {
   }
 }
 
-/* FREUD-NAV-OVERRIDE — larger, uppercase, brand-colour hover (no underline) */
-.header__menu-item{font-weight:500;font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;padding:10px 15px;}
-.header__menu-item:hover{color:#4B5C47;}
-.header__menu-item:hover span{text-decoration:none;}
+/* FREUD-NAV-OVERRIDE — bold, uppercase, underline-on-hover matching freud.org.uk */
+.header__menu-item{font-weight:700;font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;padding:10px 15px;}
+.header__menu-item:hover{color:rgb(var(--color-foreground));}
+.header__menu-item:hover span{text-decoration:underline;text-decoration-color:#719C8B;text-decoration-thickness:2px;text-underline-offset:8px;}
 
 /* FREUD-HEADER-LEFT — custom top-left link + search moved to top-right (top-center) */
-.header__utility-left{grid-area:left-icons;justify-self:start;align-self:center;font-weight:500;font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;}
-.header__utility-left:hover{color:#4B5C47;text-decoration:none;}
+.header__utility-left{grid-area:left-icons;justify-self:start;align-self:center;font-weight:700;font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;}
+.header__utility-left:hover{color:rgb(var(--color-foreground));text-decoration:underline;text-decoration-color:#719C8B;text-decoration-thickness:2px;text-underline-offset:8px;}
 @media screen and (min-width:990px){.header--custom-left.header--top-center * > .header__search{display:inline-flex;}}
 @media screen and (max-width:989px){.header__utility-left{display:none;}}
