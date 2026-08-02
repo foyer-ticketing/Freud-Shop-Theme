@@ -9,11 +9,11 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Shop_Logo.jpg",
+    "logo": "shopify://shop_images/freud-museum-logo.webp",
     "logo_width": 280,
-    "type_header_font": "crimson_text_n7",
+    "type_header_font": "assistant_n7",
     "heading_scale": 135,
-    "type_body_font": "lato_n4",
+    "type_body_font": "assistant_n4",
     "body_scale": 110,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -121,7 +121,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true,
+    "currency_code_enabled": false,
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
