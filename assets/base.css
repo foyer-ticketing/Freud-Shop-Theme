@@ -3621,3 +3621,8 @@ details-disclosure > details {
 .header__utility-left:hover{color:#4B5C47;text-decoration:none;}
 @media screen and (min-width:990px){.header--custom-left.header--top-center * > .header__search{display:inline-flex;}}
 @media screen and (max-width:989px){.header__utility-left{display:none;}}
+
+/* FREUD-ICON-LABELS — visible "Search" / "Basket" text next to the icons */
+.header__icon-text{font-size:1.2rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem;white-space:nowrap;}
+.header__icon--search .header__icon-text{margin-left:.6rem;}
+@media screen and (max-width:749px){.header__icon-text{display:none;}}
