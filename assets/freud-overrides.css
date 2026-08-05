@@ -63,3 +63,32 @@
   .footer .footer-block--newsletter .footer-block__newsletter{text-align:left;}
   .footer .footer-block--newsletter .newsletter-form__field-wrapper{max-width:100%;}
 }
+
+/* FREUD-MEGA-MENU — fix the "condensed" (single-level) dropdown, e.g. Exhibitions,
+   which Dawn collapses to display:block (one narrow column, wasted whitespace).
+   Also adds a heading at the top of every mega-menu panel linking back to the
+   parent item, similar to Kettle's Yard's dropdown treatment. */
+.mega-menu__heading-wrap{padding-bottom:1.6rem;margin-bottom:1.6rem;border-bottom:1px solid rgba(var(--color-foreground),0.1);}
+.mega-menu__heading-link{font-family:'Crimson Text',Georgia,serif;font-size:2rem;font-weight:600;letter-spacing:-0.03rem;color:rgb(var(--color-foreground));text-decoration:none;}
+.mega-menu__heading-link:hover{color:#4B5C47;text-decoration:underline;text-decoration-color:#4B5C47;}
+
+.mega-menu .mega-menu__list--condensed{
+  display:block;
+  column-count:3;
+  column-gap:4rem;
+}
+.mega-menu__list--condensed li{
+  break-inside:avoid;
+  -webkit-column-break-inside:avoid;
+  padding-bottom:.2rem;
+}
+@media screen and (max-width:1199px){
+  .mega-menu .mega-menu__list--condensed{column-count:2;}
+}
+
+.mega-menu__link:hover,
+.mega-menu__link--active{
+  color:#4B5C47;
+  text-decoration:underline;
+  text-decoration-color:#4B5C47;
+}
