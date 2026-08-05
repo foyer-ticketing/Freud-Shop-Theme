@@ -72,18 +72,22 @@
 .mega-menu__heading-link{font-family:'Crimson Text',Georgia,serif;font-size:2rem;font-weight:600;letter-spacing:-0.03rem;color:rgb(var(--color-foreground));text-decoration:none;}
 .mega-menu__heading-link:hover{color:#4B5C47;text-decoration:underline;text-decoration-color:#4B5C47;}
 
+/* !important is required: component-mega-menu.css is linked from inside
+   sections/header.liquid (loads in <body>), so it wins equal-specificity
+   ties against this file, which loads in <head> via freud-custom-head.liquid.
+   Using the same grid mechanism Dawn already uses for its full mega-menu
+   (rather than CSS multi-column) avoids column-width sizing quirks. */
 .mega-menu .mega-menu__list--condensed{
-  display:block;
-  column-count:3;
-  column-gap:4rem;
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:0.6rem 4rem !important;
 }
-.mega-menu__list--condensed li{
-  break-inside:avoid;
-  -webkit-column-break-inside:avoid;
-  padding-bottom:.2rem;
+.mega-menu .mega-menu__list--condensed > li{
+  width:auto !important;
+  padding-right:0 !important;
 }
 @media screen and (max-width:1199px){
-  .mega-menu .mega-menu__list--condensed{column-count:2;}
+  .mega-menu .mega-menu__list--condensed{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;}
 }
 
 .mega-menu__link:hover,
