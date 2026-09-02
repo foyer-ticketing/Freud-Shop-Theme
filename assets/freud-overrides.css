@@ -15,15 +15,13 @@
 
 /* FREUD-HEADER-LEFT — logo sits top-left (native Dawn layout). The custom
    "Go back to main website" link sits under the Search/Basket icons,
-   right-aligned. Positioned absolutely (anchored to .header__icons' own
-   right edge, matching its existing padding-right) rather than relying on
-   flexbox wrapping, since a flex container's auto-width with a wrapped
-   full-width child is computed inconsistently and threw the alignment off. */
-.header__icons{position:relative;padding-bottom:2rem;}
+   right-aligned. .header__icons is now a column flex container with two
+   rows: .header__icons-row (the existing icon row, unchanged, wrapped in
+   sections/header.liquid) and this link — align-items:flex-end keeps both
+   flush to the same right edge with no positioning tricks involved. */
+.header__icons{display:flex;flex-direction:column;align-items:flex-end;row-gap:.3rem;}
+.header__icons-row{display:flex;align-items:center;}
 .header__utility-left{
-  position:absolute;
-  right:.8rem;
-  bottom:0;
   white-space:nowrap;
   font-weight:700;
   font-size:1.1rem;
