@@ -57,8 +57,8 @@
         "mega_menu_feature_aTnj9a": {
           "type": "mega_menu_feature",
           "settings": {
-            "menu_handle": "book-tickets",
-            "featured_collection": "admission"
+            "menu_handle": "freud-museum-publications",
+            "featured_collection": "books-dvds"
           }
         }
       },
