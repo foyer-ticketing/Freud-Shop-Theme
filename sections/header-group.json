@@ -53,6 +53,18 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega_menu_feature_aTnj9a": {
+          "type": "mega_menu_feature",
+          "settings": {
+            "menu_handle": "book-tickets",
+            "featured_collection": "admission"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_feature_aTnj9a"
+      ],
       "settings": {
         "logo_position": "top-left",
         "mobile_logo_position": "center",
