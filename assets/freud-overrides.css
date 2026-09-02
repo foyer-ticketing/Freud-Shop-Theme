@@ -14,22 +14,23 @@
 .header__menu-item:hover span{text-decoration:underline;text-decoration-color:#719C8B;text-decoration-thickness:2px;text-underline-offset:8px;}
 
 /* FREUD-HEADER-LEFT — logo sits top-left (native Dawn layout). The custom
-   "Go back to main website" link now sits on its own line under the
-   Search/Basket icons, right-aligned, as requested. flex-basis:100% on the
-   link forces it onto a new row inside .header__icons without touching
-   Dawn's grid-template-areas. */
-.header__icons{flex-wrap:wrap;justify-content:flex-end;row-gap:.3rem;}
+   "Go back to main website" link sits under the Search/Basket icons,
+   right-aligned. Positioned absolutely (anchored to .header__icons' own
+   right edge, matching its existing padding-right) rather than relying on
+   flexbox wrapping, since a flex container's auto-width with a wrapped
+   full-width child is computed inconsistently and threw the alignment off. */
+.header__icons{position:relative;padding-bottom:2rem;}
 .header__utility-left{
-  flex-basis:100%;
-  order:99;
-  text-align:right;
+  position:absolute;
+  right:.8rem;
+  bottom:0;
+  white-space:nowrap;
   font-weight:700;
   font-size:1.1rem;
   letter-spacing:.05em;
   text-transform:uppercase;
   text-decoration:none;
   color:rgba(var(--color-foreground),0.75);
-  padding-top:.2rem;
 }
 .header__utility-left:hover{color:#4B5C47;text-decoration:none;}
 @media screen and (max-width:989px){.header__utility-left{display:none;}}
