@@ -149,12 +149,6 @@
       endif
     -%}
 
-    {%- if section.settings.menu_left_label != blank -%}
-      <a href="{{ section.settings.menu_left_link | default: routes.root_url }}" class="header__utility-left link link--text focus-inset">
-        {{ section.settings.menu_left_label }}
-      </a>
-    {%- endif -%}
-
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -312,6 +306,15 @@
         <span class="header__icon-text" aria-hidden="true">Basket</span>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
       </a>
+
+      {%- if section.settings.menu_left_label != blank -%}
+        <a
+          href="{{ section.settings.menu_left_link | default: routes.root_url }}"
+          class="header__utility-left link link--text focus-inset"
+        >
+          {{ section.settings.menu_left_label }}
+        </a>
+      {%- endif -%}
     </div>
   </header>
 </{{ header_tag }}>
@@ -481,7 +484,7 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
+  "max_blocks": 12,
   "settings": [
     {
       "type": "select",
@@ -678,6 +681,28 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "mega_menu_feature",
+      "name": "Mega menu: featured subcategory",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Adds the Kettle's Yard-style colour block + featured photo to one top-level nav dropdown. The 'Menu item handle' must exactly match the auto-generated handle of that menu item (e.g. a link titled 'Book Your Visit' has the handle book-your-visit)."
+        },
+        {
+          "type": "text",
+          "id": "menu_handle",
+          "label": "Menu item handle",
+          "info": "e.g. book-your-visit, books, homeware, play, stationery, style"
+        },
+        {
+          "type": "collection",
+          "id": "featured_collection",
+          "label": "Featured subcategory collection",
+          "info": "Its title and image are used for the photo tile. Its link is excluded from the plain link list below to avoid repeating it."
+        }
+      ]
     }
   ]
 }

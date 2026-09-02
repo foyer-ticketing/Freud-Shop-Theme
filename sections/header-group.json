@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-center",
+        "logo_position": "top-left",
         "mobile_logo_position": "center",
         "menu": "new-2026-main-menu",
         "menu_left_label": "Go back to main website",

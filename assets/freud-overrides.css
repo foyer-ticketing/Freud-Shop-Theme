@@ -13,10 +13,25 @@
 .header__menu-item:hover{color:rgb(var(--color-foreground));}
 .header__menu-item:hover span{text-decoration:underline;text-decoration-color:#719C8B;text-decoration-thickness:2px;text-underline-offset:8px;}
 
-/* FREUD-HEADER-LEFT — custom top-left link + search moved to top-right (top-center) */
-.header__utility-left{grid-area:left-icons;justify-self:start;align-self:center;font-weight:700;font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;}
+/* FREUD-HEADER-LEFT — logo sits top-left (native Dawn layout). The custom
+   "Go back to main website" link now sits on its own line under the
+   Search/Basket icons, right-aligned, as requested. flex-basis:100% on the
+   link forces it onto a new row inside .header__icons without touching
+   Dawn's grid-template-areas. */
+.header__icons{flex-wrap:wrap;justify-content:flex-end;row-gap:.3rem;}
+.header__utility-left{
+  flex-basis:100%;
+  order:99;
+  text-align:right;
+  font-weight:700;
+  font-size:1.1rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:rgba(var(--color-foreground),0.75);
+  padding-top:.2rem;
+}
 .header__utility-left:hover{color:#4B5C47;text-decoration:none;}
-@media screen and (min-width:990px){.header--custom-left.header--top-center * > .header__search{display:inline-flex;}}
 @media screen and (max-width:989px){.header__utility-left{display:none;}}
 
 /* FREUD-ICON-LABELS — visible "Search" / "Basket" text next to the icons */
@@ -95,4 +110,57 @@
   color:#4B5C47;
   text-decoration:underline;
   text-decoration-color:#4B5C47;
+}
+
+/* FREUD-MEGA-MENU-FEATURED — Kettle's Yard-style dropdown: brand-green
+   colour block (category title + link) / featured subcategory photo tile /
+   plain link list for the rest. Only renders for a top-level menu item when
+   a matching "Mega menu: featured subcategory" block is configured on the
+   header section (see header.liquid schema) — see snippets/header-mega-menu.liquid. */
+.mega-menu__content--featured{padding-top:0;padding-bottom:0;}
+.mega-menu__featured-wrap{
+  display:grid;
+  grid-template-columns:minmax(220px,26%) minmax(200px,24%) 1fr;
+  min-height:32rem;
+}
+.mega-menu__intro{
+  background-color:#4B5C47;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  gap:.8rem;
+  padding:3rem 2.4rem;
+  text-decoration:none;
+}
+.mega-menu__intro-title{
+  font-family:'Crimson Text',Georgia,serif;
+  font-size:2.6rem;
+  font-weight:600;
+  letter-spacing:-0.03rem;
+  line-height:1.1;
+}
+.mega-menu__intro-arrow{display:inline-block;width:1.8rem;}
+.mega-menu__intro-arrow svg{width:100%;height:auto;transform:rotate(-90deg);display:block;}
+.mega-menu__intro:hover{opacity:.9;}
+
+.mega-menu__featured-tile{
+  display:flex;
+  flex-direction:column;
+  padding:3rem 2rem;
+  text-decoration:none;
+  color:rgb(var(--color-foreground));
+}
+.mega-menu__featured-image{width:100%;height:auto;display:block;margin-bottom:1.2rem;}
+.mega-menu__featured-title{font-weight:700;display:flex;align-items:center;gap:.6rem;}
+.mega-menu__featured-title svg{width:1.3rem;height:auto;transform:rotate(-90deg);}
+.mega-menu__featured-tile:hover .mega-menu__featured-title{color:#4B5C47;text-decoration:underline;text-decoration-color:#4B5C47;}
+
+.mega-menu__plain-list{list-style:none;padding:3rem 2rem;margin:0;display:flex;flex-direction:column;gap:1.4rem;}
+.mega-menu__plain-link{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:rgba(var(--color-foreground),0.85);font-weight:600;}
+.mega-menu__plain-link svg{width:1.1rem;height:auto;transform:rotate(-90deg);}
+.mega-menu__plain-link:hover{color:#4B5C47;}
+
+@media screen and (max-width:1199px){
+  .mega-menu__featured-wrap{grid-template-columns:minmax(200px,32%) minmax(180px,28%) 1fr;}
 }
