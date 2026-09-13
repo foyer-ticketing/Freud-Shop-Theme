@@ -295,6 +295,63 @@
       "name": "Image banner link",
       "settings": {}
     },
+    "image_with_text_6zgkRB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_zXkUVQ": {
+          "type": "caption",
+          "settings": {
+            "caption": "NEW",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_dCpjmM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Freud's Begonia Tray",
+            "heading_size": "h1"
+          }
+        },
+        "text_7gajPD": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "button_C3cqKG": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find out more",
+            "button_link": "shopify://products/freuds-begonia-tray",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_zXkUVQ",
+        "heading_dCpjmM",
+        "text_7gajPD",
+        "button_C3cqKG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/BegoniaTray_02.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "supports_museum": {
       "type": "rich-text",
       "blocks": {
@@ -351,6 +408,7 @@
     "featured_collections",
     "1789340720e00a0090",
     "blocks_Nmc8YK",
+    "image_with_text_6zgkRB",
     "supports_museum",
     "17893411443074d266"
   ]
