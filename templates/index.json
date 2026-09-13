@@ -46,7 +46,7 @@
       "settings": {
         "image": "shopify://shop_images/slide3.jpg",
         "image_overlay_opacity": 20,
-        "image_height": "large",
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
@@ -60,6 +60,12 @@
     "category_list": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_tdtPgP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "book-your-visit-dawn"
+          }
+        },
         "featured_collection_7Fcqxh": {
           "type": "featured_collection",
           "settings": {
@@ -92,6 +98,7 @@
         }
       },
       "block_order": [
+        "featured_collection_tdtPgP",
         "featured_collection_7Fcqxh",
         "featured_collection_hLUtNP",
         "featured_collection_6watpE",
@@ -102,7 +109,7 @@
         "title": "Shop by category",
         "heading_size": "h2",
         "image_ratio": "square",
-        "columns_desktop": 2,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "columns_mobile": "1",
@@ -110,6 +117,28 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1789340347c6cc4b2a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_29ae555_XxxgK8": {
+          "type": "ai_gen_block_29ae555",
+          "settings": {
+            "image": "shopify://shop_images/Id_Collection_banner_with_button.png",
+            "alt_text": "Featured banner",
+            "aspect_ratio": "3 / 1",
+            "desktop_width_percent": 100,
+            "corner_radius": 0,
+            "product": "",
+            "collection": "id-collection"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_29ae555_XxxgK8"
+      ],
+      "settings": {}
     },
     "best_sellers": {
       "type": "featured-collection",
@@ -138,6 +167,29 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "blocks_JUhBYa": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_29ae555_FNbBdP": {
+          "type": "ai_gen_block_29ae555",
+          "settings": {
+            "image": "shopify://shop_images/Ego_Collection_banner_with_button.png",
+            "alt_text": "Featured banner",
+            "aspect_ratio": "3 / 1",
+            "desktop_width_percent": 100,
+            "corner_radius": 0,
+            "product": "",
+            "collection": "ego-collection"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_29ae555_FNbBdP"
+      ],
+      "name": "Image banner link",
+      "settings": {}
     },
     "featured_collections": {
       "type": "collection-list",
@@ -186,6 +238,29 @@
         "padding_bottom": 36
       }
     },
+    "blocks_Nmc8YK": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_29ae555_c7Q8fe": {
+          "type": "ai_gen_block_29ae555",
+          "settings": {
+            "image": "shopify://shop_images/Superego_Collection_banner_with_button.png",
+            "alt_text": "Featured banner",
+            "aspect_ratio": "3 / 1",
+            "desktop_width_percent": 100,
+            "corner_radius": 0,
+            "product": "",
+            "collection": "superego-collection"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_29ae555_c7Q8fe"
+      ],
+      "name": "Image banner link",
+      "settings": {}
+    },
     "supports_museum": {
       "type": "rich-text",
       "blocks": {
@@ -227,13 +302,51 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "1789340720e00a0090": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_96a7ef7_c8PhTQ": {
+          "type": "ai_gen_block_96a7ef7",
+          "settings": {
+            "product": "freuds-begonia-tray",
+            "eyebrow": "Featured from the collection",
+            "description": "<p>Discover something special from the Freud Museum Shop.</p>",
+            "button_label": "Buy now",
+            "sold_out_label": "Sold out",
+            "desktop_width_percent": 100,
+            "background_color": "#f7f3eb",
+            "text_color": "#333333",
+            "accent_color": "#4b5c47",
+            "button_color": "#4b5c47",
+            "button_text_color": "#ffffff",
+            "focus_color": "#1f3d2a",
+            "border_color": "#d9d4ca",
+            "placeholder_color": "#ebe6dc",
+            "muted_text_color": "#5a5a55",
+            "border_width": 0,
+            "corner_radius": 0,
+            "button_border_width": 1,
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_96a7ef7_c8PhTQ"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero",
     "category_list",
+    "1789340347c6cc4b2a",
     "best_sellers",
+    "blocks_JUhBYa",
     "featured_collections",
+    "1789340720e00a0090",
+    "blocks_Nmc8YK",
     "supports_museum"
   ]
 }
