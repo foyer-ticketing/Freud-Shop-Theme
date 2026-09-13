@@ -1,6 +1,47 @@
-{% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
-{% endschema %}
+{% doc %}
+  @prompt
+    Feature product block with product image left hand side square, free text right with a button to buy the product, seems to be an error with the button?
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% style %}
+  .ai-featured-product-{{ ai_gen_id }} { display:block; width:{{ block.settings.desktop_width_percent }}%; max-width:100%; background:{{ block.settings.background_color }}; color:{{ block.settings.text_color }}; border:{{ block.settings.border_width }}px solid {{ block.settings.border_color }}; border-radius:{{ block.settings.corner_radius }}px; overflow:hidden; }
+  .ai-featured-product-{{ ai_gen_id }}__inner { display:grid; grid-template-columns:1fr 1fr; }
+  .ai-featured-product-{{ ai_gen_id }}__media { aspect-ratio:1 / 1; min-width:0; background:{{ block.settings.placeholder_color }}; }
+  .ai-featured-product-{{ ai_gen_id }}__media img, .ai-featured-product-{{ ai_gen_id }}__placeholder, .ai-featured-product-{{ ai_gen_id }}__placeholder svg { display:block; width:100%; height:100%; object-fit:cover; }
+  .ai-featured-product-{{ ai_gen_id }}__placeholder { display:flex; align-items:center; justify-content:center; color:{{ block.settings.muted_text_color }}; }
+  .ai-featured-product-{{ ai_gen_id }}__placeholder svg { max-width:70%; max-height:70%; }
+  .ai-featured-product-{{ ai_gen_id }}__content { display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:18px; padding:clamp(24px,5vw,64px); }
+  .ai-featured-product-{{ ai_gen_id }}__eyebrow { margin:0; color:{{ block.settings.accent_color }}; font-size:.8rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+  .ai-featured-product-{{ ai_gen_id }}__title { margin:0; color:{{ block.settings.text_color }}; font-size:clamp(1.6rem,3vw,2.5rem); line-height:1.1; }
+  .ai-featured-product-{{ ai_gen_id }}__description { color:{{ block.settings.text_color }}; font-size:1rem; line-height:1.6; }
+  .ai-featured-product-{{ ai_gen_id }}__description p { margin:0; }
+  .ai-featured-product-{{ ai_gen_id }}__price { color:{{ block.settings.text_color }}; font-size:1.1rem; font-weight:700; }
+  .ai-featured-product-{{ ai_gen_id }}__content form { width:100%; }
+  .ai-featured-product-{{ ai_gen_id }}__button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 24px; border:{{ block.settings.button_border_width }}px solid {{ block.settings.button_color }}; border-radius:{{ block.settings.button_radius }}px; background:{{ block.settings.button_color }}; color:{{ block.settings.button_text_color }}; font:inherit; font-weight:700; cursor:pointer; }
+  .ai-featured-product-{{ ai_gen_id }}__button:hover { opacity:.88; }
+  .ai-featured-product-{{ ai_gen_id }}__button:focus-visible { outline:3px solid {{ block.settings.focus_color }}; outline-offset:3px; }
+  .ai-featured-product-{{ ai_gen_id }}__button:disabled { opacity:.55; cursor:not-allowed; }
+  .ai-featured-product-{{ ai_gen_id }}__empty { padding:32px; color:{{ block.settings.muted_text_color }}; text-align:center; }
+  @media screen and (max-width:749px) { .ai-featured-product-{{ ai_gen_id }} { width:100%; } .ai-featured-product-{{ ai_gen_id }}__inner { grid-template-columns:1fr; } .ai-featured-product-{{ ai_gen_id }}__content { padding:28px 24px 32px; } }
+{% endstyle %}
+<div class="ai-featured-product-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% assign featured_product = block.settings.product %}
+  {% if featured_product != blank %}
+    <div class="ai-featured-product-{{ ai_gen_id }}__inner">
+      <div class="ai-featured-product-{{ ai_gen_id }}__media">
+        {% if featured_product.featured_image %}<img src="{{ featured_product.featured_image | image_url: width: 1200 }}" alt="{{ featured_product.featured_image.alt | default: featured_product.title | escape }}" width="{{ featured_product.featured_image.width }}" height="{{ featured_product.featured_image.height }}" loading="lazy">{% else %}<div class="ai-featured-product-{{ ai_gen_id }}__placeholder">{{ 'product-apparel-1' | placeholder_svg_tag }}</div>{% endif %}
+      </div>
+      <div class="ai-featured-product-{{ ai_gen_id }}__content">
+        {% if block.settings.eyebrow != blank %}<p class="ai-featured-product-{{ ai_gen_id }}__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+        <h2 class="ai-featured-product-{{ ai_gen_id }}__title">{{ featured_product.title | escape }}</h2>
+        {% if block.settings.description != blank %}<div class="ai-featured-product-{{ ai_gen_id }}__description">{{ block.settings.description }}</div>{% endif %}
+        <div class="ai-featured-product-{{ ai_gen_id }}__price">{{ featured_product.selected_or_first_available_variant.price | money }}</div>
+        {% form 'product', featured_product %}
+          <input type="hidden" name="id" value="{{ featured_product.selected_or_first_available_variant.id }}">
+          <button type="submit" class="ai-featured-product-{{ ai_gen_id }}__button" {% unless featured_product.available %}disabled{% endunless %}>{% if featured_product.available %}{{ block.settings.button_label | escape }}{% else %}{{ block.settings.sold_out_label | escape }}{% endif %}</button>
+        {% endform %}
+      </div>
+    </div>
+  {% else %}<div class="ai-featured-product-{{ ai_gen_id }}__empty">Select a product to feature.</div>{% endif %}
+</div>
+{% schema %}{"name":"Featured product","settings":[{"type":"product","id":"product","label":"Product"},{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Featured from the collection"},{"type":"richtext","id":"description","label":"Description","default":"<p>Discover something special from the Freud Museum Shop.</p>"},{"type":"text","id":"button_label","label":"Button label","default":"Buy now"},{"type":"text","id":"sold_out_label","label":"Sold-out label","default":"Sold out"},{"type":"range","id":"desktop_width_percent","label":"Desktop width","min":50,"max":100,"step":5,"unit":"%","default":100},{"type":"color","id":"background_color","label":"Background","default":"#f7f3eb"},{"type":"color","id":"text_color","label":"Text","default":"#333333"},{"type":"color","id":"accent_color","label":"Accent","default":"#4b5c47"},{"type":"color","id":"button_color","label":"Button","default":"#4b5c47"},{"type":"color","id":"button_text_color","label":"Button text","default":"#ffffff"},{"type":"color","id":"focus_color","label":"Focus outline","default":"#1f3d2a"},{"type":"color","id":"border_color","label":"Border","default":"#d9d4ca"},{"type":"color","id":"placeholder_color","label":"Image placeholder","default":"#ebe6dc"},{"type":"color","id":"muted_text_color","label":"Muted text","default":"#5a5a55"},{"type":"range","id":"border_width","label":"Border width","min":0,"max":4,"step":1,"unit":"px","default":0},{"type":"range","id":"corner_radius","label":"Corner radius","min":0,"max":40,"step":2,"unit":"px","default":0},{"type":"range","id":"button_border_width","label":"Button border","min":0,"max":4,"step":1,"unit":"px","default":1},{"type":"range","id":"button_radius","label":"Button radius","min":0,"max":40,"step":2,"unit":"px","default":0}],"presets":[{"name":"Featured product"}],"tag":null,"class":"featured-product-block"}{% endschema %}
