@@ -64,11 +64,11 @@
                     <ul class="mega-menu__plain-list" role="list">
                       {%- for childlink in link.links -%}
                         {%- unless childlink.url == featured_collection.url -%}
-                          <li>
+                          <li{% if forloop.last %} class="mega-menu__plain-item--view-all"{% endif %}>
                             <a
                               id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                               href="{{ childlink.url }}"
-                              class="mega-menu__plain-link link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                              class="mega-menu__plain-link link{% if childlink.current %} mega-menu__link--active{% endif %}{% if forloop.last %} mega-menu__plain-link--view-all{% endif %}"
                               {% if childlink.current %}
                                 aria-current="page"
                               {% endif %}

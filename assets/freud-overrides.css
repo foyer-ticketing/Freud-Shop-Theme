@@ -155,10 +155,24 @@
 .mega-menu__featured-title svg{width:1.3rem;height:auto;transform:rotate(-90deg);}
 .mega-menu__featured-tile:hover .mega-menu__featured-title{color:#4B5C47;text-decoration:underline;text-decoration-color:#4B5C47;}
 
-.mega-menu__plain-list{list-style:none;padding:3rem 2rem;margin:0;display:flex;flex-direction:column;gap:1.4rem;}
+.mega-menu__plain-list{list-style:none;padding:3rem 2rem;margin:0;display:flex;flex-direction:column;gap:1.4rem;min-height:100%;}
 .mega-menu__plain-link{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:rgba(var(--color-foreground),0.85);font-weight:600;}
 .mega-menu__plain-link svg{width:1.1rem;height:auto;transform:rotate(-90deg);}
 .mega-menu__plain-link:hover{color:#4B5C47;}
+
+/* The last plain link (e.g. "Shop All X Collection") is pulled out as a
+   distinct "View all" CTA at the bottom-right of the panel, instead of
+   blending into the rest of the list — margin-top:auto pushes it to the
+   end of the column regardless of how many links are above it. */
+.mega-menu__plain-item--view-all{margin-top:auto;padding-top:1.4rem;border-top:1px solid rgba(var(--color-foreground),0.1);align-self:flex-end;}
+.mega-menu__plain-link--view-all{
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size:1.2rem;
+  color:#4B5C47 !important;
+}
+.mega-menu__plain-link--view-all:hover{text-decoration:underline;text-decoration-color:#4B5C47;}
 
 @media screen and (max-width:1199px){
   .mega-menu__featured-wrap{grid-template-columns:minmax(200px,32%) minmax(180px,28%) 1fr;}
