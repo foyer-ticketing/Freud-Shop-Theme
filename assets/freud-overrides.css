@@ -88,7 +88,7 @@
 .mega-menu__featured-wrap{
   display:grid;
   grid-template-columns:minmax(220px,26%) minmax(200px,24%) 1fr;
-  min-height:32rem;
+  align-items:stretch;
 }
 .mega-menu__intro{
   background-color:#4B5C47;
@@ -111,36 +111,63 @@
 .mega-menu__intro-arrow svg{width:100%;height:auto;transform:rotate(-90deg);display:block;}
 .mega-menu__intro:hover{opacity:.9;}
 
+/* Featured photo tile: the caption sits overlaid on the image itself (with a
+   dark gradient behind it for legibility) instead of below it, and the image
+   fills the full height of the row so it matches the colour block's height. */
 .mega-menu__featured-tile{
-  display:flex;
-  flex-direction:column;
-  padding:3rem 2rem;
+  position:relative;
+  display:block;
+  min-height:28rem;
   text-decoration:none;
-  color:rgb(var(--color-foreground));
+  overflow:hidden;
 }
-.mega-menu__featured-image{width:100%;height:auto;display:block;margin-bottom:1.2rem;}
-.mega-menu__featured-title{font-weight:700;display:flex;align-items:center;gap:.6rem;}
+.mega-menu__featured-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.mega-menu__featured-title{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:0;
+  padding:1.6rem 2rem;
+  background:linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  color:#fff;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
 .mega-menu__featured-title svg{width:1.3rem;height:auto;transform:rotate(-90deg);}
-.mega-menu__featured-tile:hover .mega-menu__featured-title{color:#4B5C47;text-decoration:underline;text-decoration-color:#4B5C47;}
+.mega-menu__featured-tile:hover .mega-menu__featured-title{text-decoration:underline;}
 
+/* Plain links in the middle column have no arrow — the arrow is reserved for
+   the colour block, the photo caption and the "View all" button, so it reads
+   as a deliberate CTA marker rather than decoration on every single link. */
 .mega-menu__plain-list{list-style:none;padding:3rem 2rem;margin:0;display:flex;flex-direction:column;gap:1.4rem;min-height:100%;}
-.mega-menu__plain-link{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:rgba(var(--color-foreground),0.85);font-weight:600;}
-.mega-menu__plain-link svg{width:1.1rem;height:auto;transform:rotate(-90deg);}
+.mega-menu__plain-link{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:rgba(var(--color-foreground),0.85);font-weight:600;}
 .mega-menu__plain-link:hover{color:#4B5C47;}
 
 /* The last plain link (e.g. "Shop All X Collection") is pulled out as a
-   distinct "View all" CTA at the bottom-right of the panel, instead of
-   blending into the rest of the list — margin-top:auto pushes it to the
-   end of the column regardless of how many links are above it. */
-.mega-menu__plain-item--view-all{margin-top:auto;padding-top:1.4rem;border-top:1px solid rgba(var(--color-foreground),0.1);align-self:flex-end;}
+   solid brand-green button at the bottom of the column, instead of blending
+   into the rest of the list — margin-top:auto pushes it down regardless of
+   how many links are above it. */
+.mega-menu__plain-item--view-all{margin-top:auto;padding-top:1.4rem;}
 .mega-menu__plain-link--view-all{
+  background-color:#4B5C47;
+  color:#fff !important;
   font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  font-size:1.2rem;
-  color:#4B5C47 !important;
+  font-size:1.4rem;
+  padding:1rem 1.8rem;
+  border-radius:2px;
 }
-.mega-menu__plain-link--view-all:hover{text-decoration:underline;text-decoration-color:#4B5C47;}
+.mega-menu__plain-link--view-all svg{width:1.1rem;height:auto;transform:rotate(-90deg);}
+.mega-menu__plain-link--view-all:hover{opacity:.9;color:#fff !important;}
 
 @media screen and (max-width:1199px){
   .mega-menu__featured-wrap{grid-template-columns:minmax(200px,32%) minmax(180px,28%) 1fr;}

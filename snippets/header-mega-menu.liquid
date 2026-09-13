@@ -67,7 +67,9 @@
                             {% endif %}
                           >
                             {{ childlink.title | escape }}
-                            <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+                            {%- if forloop.last -%}
+                              <span class="svg-wrapper">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+                            {%- endif -%}
                           </a>
                         </li>
                       {%- endunless -%}
