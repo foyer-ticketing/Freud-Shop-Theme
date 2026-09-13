@@ -238,6 +238,40 @@
         "padding_bottom": 36
       }
     },
+    "1789340720e00a0090": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_96a7ef7_c8PhTQ": {
+          "type": "ai_gen_block_96a7ef7",
+          "settings": {
+            "product": "freuds-begonia-tray",
+            "eyebrow": "NEW TO THE FREUD MUSEUM",
+            "description": "",
+            "button_label": "Buy Now",
+            "sold_out_label": "Sold out",
+            "desktop_width_percent": 100,
+            "background_color": "#f7f3eb",
+            "text_color": "#333333",
+            "accent_color": "#4b5c47",
+            "button_color": "#4b5c47",
+            "button_text_color": "#ffffff",
+            "focus_color": "#1f3d2a",
+            "border_color": "#d9d4ca",
+            "placeholder_color": "#ebe6dc",
+            "muted_text_color": "#5a5a55",
+            "border_width": 0,
+            "corner_radius": 0,
+            "button_border_width": 1,
+            "button_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_96a7ef7_c8PhTQ"
+      ],
+      "settings": {}
+    },
     "blocks_Nmc8YK": {
       "type": "_blocks",
       "blocks": {
@@ -303,38 +337,8 @@
         "padding_bottom": 52
       }
     },
-    "1789340720e00a0090": {
+    "17893411443074d266": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_96a7ef7_c8PhTQ": {
-          "type": "ai_gen_block_96a7ef7",
-          "settings": {
-            "product": "freuds-begonia-tray",
-            "eyebrow": "Featured from the collection",
-            "description": "<p>Discover something special from the Freud Museum Shop.</p>",
-            "button_label": "Buy now",
-            "sold_out_label": "Sold out",
-            "desktop_width_percent": 100,
-            "background_color": "#f7f3eb",
-            "text_color": "#333333",
-            "accent_color": "#4b5c47",
-            "button_color": "#4b5c47",
-            "button_text_color": "#ffffff",
-            "focus_color": "#1f3d2a",
-            "border_color": "#d9d4ca",
-            "placeholder_color": "#ebe6dc",
-            "muted_text_color": "#5a5a55",
-            "border_width": 0,
-            "corner_radius": 0,
-            "button_border_width": 1,
-            "button_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_96a7ef7_c8PhTQ"
-      ],
       "settings": {}
     }
   },
@@ -347,6 +351,7 @@
     "featured_collections",
     "1789340720e00a0090",
     "blocks_Nmc8YK",
-    "supports_museum"
+    "supports_museum",
+    "17893411443074d266"
   ]
 }
