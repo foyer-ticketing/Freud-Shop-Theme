@@ -96,10 +96,10 @@
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
-  gap:.8rem;
   padding:3rem 2.4rem;
   text-decoration:none;
 }
+.mega-menu__intro-row{display:flex;align-items:center;gap:1rem;}
 .mega-menu__intro-title{
   font-family:'Crimson Text',Georgia,serif;
   font-size:2.6rem;
@@ -107,7 +107,7 @@
   letter-spacing:-0.03rem;
   line-height:1.1;
 }
-.mega-menu__intro-arrow{display:inline-block;width:1.8rem;}
+.mega-menu__intro-arrow{display:inline-flex;flex-shrink:0;width:1.6rem;}
 .mega-menu__intro-arrow svg{width:100%;height:auto;transform:rotate(-90deg);display:block;}
 .mega-menu__intro:hover{opacity:.9;}
 

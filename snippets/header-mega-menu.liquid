@@ -36,8 +36,10 @@
               >
                 <div class="mega-menu__featured-wrap page-width">
                   <a href="{{ link.url }}" class="mega-menu__intro">
-                    <span class="mega-menu__intro-title">{{ link.title | escape }}</span>
-                    <span class="svg-wrapper mega-menu__intro-arrow">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+                    <span class="mega-menu__intro-row">
+                      <span class="mega-menu__intro-title">{{ link.title | escape }}</span>
+                      <span class="svg-wrapper mega-menu__intro-arrow">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+                    </span>
                   </a>
 
                   <a href="{{ featured_link.url }}" class="mega-menu__featured-tile">
