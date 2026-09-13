@@ -60,37 +60,51 @@
     "category_list": {
       "type": "collection-list",
       "blocks": {
-        "c1": {
+        "featured_collection_7Fcqxh": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ceramics"
+            "collection": "books-copy"
           }
         },
-        "c2": {
+        "featured_collection_hLUtNP": {
           "type": "featured_collection",
           "settings": {
-            "collection": "art-prints"
+            "collection": "homeware-dawn"
           }
         },
-        "c3": {
+        "featured_collection_6watpE": {
           "type": "featured_collection",
           "settings": {
-            "collection": "books-dvds"
+            "collection": "play-dawn"
+          }
+        },
+        "featured_collection_dx7XP8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "stationery-dawn"
+          }
+        },
+        "featured_collection_4J4yM4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "style-dawn"
           }
         }
       },
       "block_order": [
-        "c1",
-        "c2",
-        "c3"
+        "featured_collection_7Fcqxh",
+        "featured_collection_hLUtNP",
+        "featured_collection_6watpE",
+        "featured_collection_dx7XP8",
+        "featured_collection_4J4yM4"
       ],
       "settings": {
         "title": "Shop by category",
         "heading_size": "h2",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
+        "show_view_all": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
