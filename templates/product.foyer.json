@@ -9,83 +9,46 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "1789333469ba94927c": {
+      "type": "_blocks",
       "blocks": {
-        "vendor": {
-          "type": "text",
+        "ai_gen_block_a9535a9_rDXMcQ": {
+          "type": "ai_gen_block_a9535a9",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
+            "desktop_width_percent": 100,
+            "title_size": 40,
+            "description_size": 16,
+            "title_spacing": 16,
+            "text_color": "#333333"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a9535a9_rDXMcQ"
+      ],
+      "settings": {}
+    },
+    "1789333017604b277e": {
+      "type": "apps",
+      "blocks": {
+        "foyer_freud_museum_exhibition_date_HEEBfi": {
+          "type": "shopify://apps/foyer-freud-museum/blocks/exhibition_date/0199a074-9cb7-71ef-897e-86b309352c90",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "shipping": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & returns",
-            "icon": "truck",
-            "content": "<p>UK and international shipping available. Returns accepted within 30 days. See our full delivery &amp; returns policy for details.</p>",
-            "page": ""
-          }
-        },
-        "supports": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Supporting the museum",
-            "icon": "heart",
-            "content": "<p>Every purchase supports the Freud Museum London and helps care for the house, its collections and Freud's legacy.</p>",
-            "page": ""
+            "proxy-url": "apps/proxy"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "shipping",
-        "supports",
-        "share"
+        "foyer_freud_museum_exhibition_date_HEEBfi"
       ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -96,21 +59,15 @@
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "hide_variants": true,
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
       }
     },
-    "disclosures": {
-      "type": "disclosures",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -129,8 +86,9 @@
     }
   },
   "order": [
+    "1789333469ba94927c",
+    "1789333017604b277e",
     "main",
-    "disclosures",
     "related-products"
   ]
 }
