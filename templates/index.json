@@ -12,25 +12,25 @@
     "hero": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Freud Museum Shop",
-            "heading_size": "h1"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Every purchase supports the museum",
+            "text": "Exhibition Collection",
             "text_style": "body"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gifts from <em>40 Objects, 40 Years</em>",
+            "heading_size": "h2"
           }
         },
         "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop the collection",
+            "button_link_1": "shopify://collections/40-objects-40-years",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -39,19 +39,23 @@
         }
       },
       "block_order": [
-        "heading",
         "text",
+        "heading",
         "buttons"
       ],
+      "custom_css": [
+        ".banner {background-color: #bed2c3;}",
+        ".banner__box {opacity: 95%;}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/slide3.jpg",
+        "image": "shopify://shop_images/40-objects-freud.png",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -363,6 +367,11 @@
     "17893411443074d266": {
       "type": "_blocks",
       "settings": {}
+    },
+    "blocks_UTw3Ft": {
+      "type": "_blocks",
+      "name": "Image banner link",
+      "settings": {}
     }
   },
   "order": [
@@ -375,6 +384,7 @@
     "blocks_Nmc8YK",
     "image_with_text_6zgkRB",
     "supports_museum",
-    "17893411443074d266"
+    "17893411443074d266",
+    "blocks_UTw3Ft"
   ]
 }
