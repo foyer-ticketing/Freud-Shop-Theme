@@ -9,83 +9,57 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "rich_text_DRHiTe": {
+      "type": "rich-text",
       "blocks": {
-        "vendor": {
+        "heading_kmpNYz": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_EECb6M": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "shipping": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & returns",
-            "icon": "truck",
-            "content": "<p>UK and international shipping available. Returns accepted within 30 days. See our full delivery &amp; returns policy for details.</p>",
-            "page": ""
-          }
-        },
-        "supports": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Supporting the museum",
-            "icon": "heart",
-            "content": "<p>Every purchase supports the Freud Museum London and helps care for the house, its collections and Freud's legacy.</p>",
-            "page": ""
+            "text": "<p></p>{{ product.description }}"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "shipping",
-        "supports",
-        "share"
+        "heading_kmpNYz",
+        "text_EECb6M"
       ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17894053484d7bd605": {
+      "type": "apps",
+      "blocks": {
+        "foyer_freud_museum_exhibition_date_xcm487": {
+          "type": "shopify://apps/foyer-freud-museum/blocks/exhibition_date/0199a074-9cb7-71ef-897e-86b309352c90",
+          "settings": {
+            "proxy-url": "apps/proxy"
+          }
+        }
+      },
+      "block_order": [
+        "foyer_freud_museum_exhibition_date_xcm487"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -102,15 +76,9 @@
         "padding_bottom": 12
       }
     },
-    "disclosures": {
-      "type": "disclosures",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -129,8 +97,9 @@
     }
   },
   "order": [
+    "rich_text_DRHiTe",
+    "17894053484d7bd605",
     "main",
-    "disclosures",
     "related-products"
   ]
 }
