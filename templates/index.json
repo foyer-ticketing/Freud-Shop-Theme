@@ -207,19 +207,19 @@
         "f2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "anna-freud-room"
+            "collection": "exclusive"
           }
         },
         "f3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "diaries-journals"
+            "collection": "spotlight-on-the-creators"
           }
         },
         "f4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "greeting-cards-postcards1"
+            "collection": "art-prints"
           }
         }
       },
