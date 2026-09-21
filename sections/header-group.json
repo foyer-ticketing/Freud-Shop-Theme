@@ -17,7 +17,7 @@
         "announcement_LhwktW": {
           "type": "announcement",
           "settings": {
-            "text": "Delivery Duty Paid Shipping to USA now available",
+            "text": "Delivery Duty Paid Shipping to some EU countries and USA now available",
             "link": ""
           }
         },
@@ -53,18 +53,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "mega_menu_feature_aTnj9a": {
-          "type": "mega_menu_feature",
-          "settings": {
-            "menu_handle": "books-dvds",
-            "featured_collection": "books-dvds"
-          }
-        }
-      },
-      "block_order": [
-        "mega_menu_feature_aTnj9a"
-      ],
       "settings": {
         "logo_position": "top-left",
         "mobile_logo_position": "center",
