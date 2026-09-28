@@ -180,6 +180,11 @@
           "confirm_step": false,
           "hide_outside_eu": false
         }
+      },
+      "1331751956769120012": {
+        "type": "shopify://apps/foyer-freud-museum/blocks/cart_validator/0199a074-9cb7-71ef-897e-86b309352c90",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
