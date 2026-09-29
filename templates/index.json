@@ -125,22 +125,27 @@
     "1789340347c6cc4b2a": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_29ae555_XxxgK8": {
-          "type": "ai_gen_block_29ae555",
+        "ai_gen_block_3de28bd_BgiKqX": {
+          "type": "ai_gen_block_3de28bd",
           "settings": {
-            "image": "shopify://shop_images/Id_Collection_banner_with_button.png",
-            "alt_text": "Featured banner",
-            "aspect_ratio": "3 / 1",
-            "desktop_width_percent": 100,
-            "corner_radius": 0,
-            "product": "",
-            "collection": "id-collection"
+            "image": "shopify://shop_images/Id_Collection_banner_no_text.png",
+            "banner_height": 420,
+            "mobile_image_height": 220,
+            "heading": "Id Collection",
+            "subheading": "Gifts to satisfy desires",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/id-collection",
+            "heading_size": 50,
+            "subheading_size": 30,
+            "overlay_opacity": 45,
+            "button_background": "#FFFFFF",
+            "button_text_color": "#4B5C47"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_29ae555_XxxgK8"
+        "ai_gen_block_3de28bd_BgiKqX"
       ],
       "settings": {}
     },
@@ -174,24 +179,6 @@
     },
     "blocks_JUhBYa": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_29ae555_FNbBdP": {
-          "type": "ai_gen_block_29ae555",
-          "settings": {
-            "image": "shopify://shop_images/Ego_Collection_banner_with_button.png",
-            "alt_text": "Featured banner",
-            "aspect_ratio": "3 / 1",
-            "desktop_width_percent": 100,
-            "corner_radius": 0,
-            "product": "",
-            "collection": "ego-collection"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_29ae555_FNbBdP"
-      ],
       "name": "Image banner link",
       "settings": {}
     },
@@ -244,25 +231,63 @@
     },
     "blocks_Nmc8YK": {
       "type": "_blocks",
+      "name": "Image banner link",
+      "settings": {}
+    },
+    "blocks_7xjVAT": {
+      "type": "_blocks",
       "blocks": {
-        "ai_gen_block_29ae555_c7Q8fe": {
-          "type": "ai_gen_block_29ae555",
+        "ai_gen_block_3de28bd_wcPMEL": {
+          "type": "ai_gen_block_3de28bd",
           "settings": {
-            "image": "shopify://shop_images/Superego_Collection_banner_with_button.png",
-            "alt_text": "Featured banner",
-            "aspect_ratio": "3 / 1",
-            "desktop_width_percent": 100,
-            "corner_radius": 0,
-            "product": "",
-            "collection": "superego-collection"
+            "image": "shopify://shop_images/Superego_Collection_banner_no_text.png",
+            "banner_height": 360,
+            "mobile_image_height": 220,
+            "heading": "Superego Collection",
+            "subheading": "Gifts to strive towards perfection",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/superego-collection",
+            "heading_size": 40,
+            "subheading_size": 24,
+            "overlay_opacity": 45,
+            "button_background": "#4b5c47",
+            "button_text_color": "#ffffff"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_29ae555_c7Q8fe"
+        "ai_gen_block_3de28bd_wcPMEL"
       ],
-      "name": "Image banner link",
+      "name": "Horizontal image banner",
+      "settings": {}
+    },
+    "blocks_U6CUk3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3de28bd_tNkzgY": {
+          "type": "ai_gen_block_3de28bd",
+          "settings": {
+            "image": "shopify://shop_images/Ego_Collection_banner_no_text.png",
+            "banner_height": 360,
+            "mobile_image_height": 220,
+            "heading": "Ego Collection",
+            "subheading": "Gifts for reason and good sense",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/ego-collection",
+            "heading_size": 40,
+            "subheading_size": 24,
+            "overlay_opacity": 45,
+            "button_background": "#4b5c47",
+            "button_text_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3de28bd_tNkzgY"
+      ],
+      "name": "Horizontal image banner",
       "settings": {}
     },
     "image_with_text_6zgkRB": {
@@ -382,6 +407,8 @@
     "blocks_JUhBYa",
     "featured_collections",
     "blocks_Nmc8YK",
+    "blocks_7xjVAT",
+    "blocks_U6CUk3",
     "image_with_text_6zgkRB",
     "supports_museum",
     "17893411443074d266",
