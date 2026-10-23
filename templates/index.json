@@ -136,7 +136,7 @@
             "button_label": "Shop now",
             "button_link": "shopify://collections/id-collection",
             "heading_size": 40,
-            "subheading_size": 20,
+            "subheading_size": 24,
             "overlay_opacity": 45,
             "button_background": "#ffffff",
             "button_text_color": "#4b5c47"
