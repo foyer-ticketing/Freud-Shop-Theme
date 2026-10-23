@@ -242,7 +242,7 @@
           "settings": {
             "image": "shopify://shop_images/Ego_Collection_banner_no_text.png",
             "banner_height": 500,
-            "mobile_image_height": 140,
+            "mobile_image_height": 160,
             "heading": "Ego Collection",
             "subheading": "Gifts for reason and good sense",
             "button_label": "Shop now",
