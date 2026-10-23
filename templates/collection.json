@@ -12,7 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        ".product__title h1 {font-size: 18px;}"
+        ".product__title h1 {font-size: 16px;}"
       ],
       "settings": {
         "show_collection_description": true,
