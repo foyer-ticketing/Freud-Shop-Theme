@@ -138,8 +138,8 @@
             "heading_size": 50,
             "subheading_size": 30,
             "overlay_opacity": 45,
-            "button_background": "#FFFFFF",
-            "button_text_color": "#4B5C47"
+            "button_background": "#ffffff",
+            "button_text_color": "#4b5c47"
           },
           "blocks": {}
         }
@@ -234,34 +234,6 @@
       "name": "Image banner link",
       "settings": {}
     },
-    "blocks_7xjVAT": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_3de28bd_wcPMEL": {
-          "type": "ai_gen_block_3de28bd",
-          "settings": {
-            "image": "shopify://shop_images/Superego_Collection_banner_no_text.png",
-            "banner_height": 360,
-            "mobile_image_height": 220,
-            "heading": "Superego Collection",
-            "subheading": "Gifts to strive towards perfection",
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/superego-collection",
-            "heading_size": 40,
-            "subheading_size": 24,
-            "overlay_opacity": 45,
-            "button_background": "#4b5c47",
-            "button_text_color": "#ffffff"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_3de28bd_wcPMEL"
-      ],
-      "name": "Horizontal image banner",
-      "settings": {}
-    },
     "blocks_U6CUk3": {
       "type": "_blocks",
       "blocks": {
@@ -347,6 +319,34 @@
         "padding_bottom": 36
       }
     },
+    "blocks_7xjVAT": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3de28bd_wcPMEL": {
+          "type": "ai_gen_block_3de28bd",
+          "settings": {
+            "image": "shopify://shop_images/Superego_Collection_banner_no_text.png",
+            "banner_height": 360,
+            "mobile_image_height": 220,
+            "heading": "Superego Collection",
+            "subheading": "Gifts to strive towards perfection",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/superego-collection",
+            "heading_size": 40,
+            "subheading_size": 24,
+            "overlay_opacity": 45,
+            "button_background": "#4b5c47",
+            "button_text_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3de28bd_wcPMEL"
+      ],
+      "name": "Horizontal image banner",
+      "settings": {}
+    },
     "supports_museum": {
       "type": "rich-text",
       "blocks": {
@@ -407,9 +407,9 @@
     "blocks_JUhBYa",
     "featured_collections",
     "blocks_Nmc8YK",
-    "blocks_7xjVAT",
     "blocks_U6CUk3",
     "image_with_text_6zgkRB",
+    "blocks_7xjVAT",
     "supports_museum",
     "17893411443074d266",
     "blocks_UTw3Ft"
